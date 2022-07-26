@@ -234,7 +234,7 @@ class PlatformAssetBundle extends CachingAssetBundle {
     final ByteData? asset =
         await ServicesBinding.instance.defaultBinaryMessenger.send('flutter/assets', encoded.buffer.asByteData());
     if (asset == null)
-      throw FlutterError('Unable to load asset: $key');
+      /throw FlutterError('Unable to load asset: $key');
     return asset;
   }
 }
